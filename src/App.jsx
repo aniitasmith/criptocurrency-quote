@@ -18,7 +18,7 @@ const Container = styled.div`
 `
 
 const Image = styled.img`
-  max-width: 400px;
+  max-width: 250px;
   width: 80%;
   margin: 100px auto 0 auto;
   display: block;
@@ -68,6 +68,15 @@ function App() {
       quoteCripto()
     }
   },[currencies])
+
+  useEffect(() => {
+    const autoScroll = () => {
+      if (quote.PRICE){
+        document.getElementById('quote-resolve').scrollIntoView()
+    }
+  }
+  autoScroll()
+  },[quote])
   
   return (
     <Container>
@@ -81,7 +90,7 @@ function App() {
           setCurrencies={setCurrencies}
         />
         {loading && <Spinner/>}
-       {quote.PRICE && <Quote quote={quote}/>}
+        {quote.PRICE && <Quote quote={quote}/>}
         </div>
     </Container>
   )

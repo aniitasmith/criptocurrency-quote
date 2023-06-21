@@ -12,12 +12,11 @@ const Container = styled.div`
 `
 const Image = styled.img`
   display: block;
-  width: 150px;  
+  width: 120px;  
 `
 
-
 const Text = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   span {
     font-weight: 700;
   }  
@@ -33,16 +32,16 @@ const Price = styled.p`
 const Quote = ({quote}) => {
   const { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, IMAGEURL, LASTUPDATE} = quote
   return (
-    <Container>
+    <Container id="quote-resolve">
       <Image 
         src={`https://cryptocompare.com/${IMAGEURL}`} 
         alt="img cripto"/>
       <div>
-        <Price> El precio es de: <span>{PRICE}</span></Price>
-        <Text> El precio mas alto del dia es de: <span>{HIGHDAY}</span></Text>
-        <Text> El precio mas bajo del dia es de: <span>{LOWDAY}</span></Text>
-        <Text> La variacion las ultimas 24 horas es de: <span>{CHANGEPCT24HOUR}%</span></Text> 
-        <Text> Ultima actuaizacion: <span>{LASTUPDATE}</span></Text>
+        <Price>The price is: <span>{PRICE}</span></Price>
+        <Text>The highest price of the day is: <span>{HIGHDAY}</span></Text>
+        <Text>The lowest price of the day is:<span>{LOWDAY}</span></Text>
+        <Text>The variation in the last 24 hours is: <span>{CHANGEPCT24HOUR}%</span></Text> 
+        <Text>Last update:: <span>{LASTUPDATE}</span></Text>
       </div>
 
     </Container>
