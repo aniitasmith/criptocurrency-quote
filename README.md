@@ -13,7 +13,7 @@ _The project consists of doing the following:_
 - Have been used **Functional Components**, **Hooks useState, useEffect & Custom(own Hooks)**, **Styled Components** and **Async/Await** in this project.
 
 ## Deployment: 
-  [URL]
+  [https://criptocurrency-app.netlify.app/](https://criptocurrency-app.netlify.app/)
 
 ## Built 🛠️
 
